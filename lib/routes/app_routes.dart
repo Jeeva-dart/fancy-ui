@@ -1,11 +1,11 @@
-import 'package:fancy_ui/features/animation_logo.dart';
+import 'package:fancy_ui/features/dashboard/views/dashboard_view.dart';
 import 'package:fancy_ui/features/login/views/login.dart';
 import 'package:fancy_ui/features/register/views/register_view.dart';
 import 'package:go_router/go_router.dart';
 
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: "/login",
+  initialLocation: "/dashboard",
   routes: [
     GoRoute(
       name: "root",
@@ -23,9 +23,9 @@ final router = GoRouter(
       builder: (context, state) => const RegisterView(),
     ),
     GoRoute(
-      name: 'anim',
-      path: '/anim',
-      builder: (context, state) => const LogoApp(),
+      name: 'dashboard',
+      path: '/dashboard',
+      builder: (context, state) => const DashboardView(),
     ),
   ],
 );
